@@ -1,5 +1,5 @@
 # OMDACS
-### Online Medical Diagnosis and Concultancy System - ASP.NET Core MVC Project
+### Online Medical Diagnosis and Concultancy System - ASP.NET MVC Project
 
 - db-script.sql has necessary tables for the project.
 - Project has server side validations. They must be with JS to improve server performance.
