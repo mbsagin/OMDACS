@@ -1,5 +1,5 @@
-## OMDACS
-# Online Medical Diagnosis and Concultancy System
+# OMDACS
+### Online Medical Diagnosis and Concultancy System
 
 - db-script.sql has necessary tables for the project.
 - Project has server side validations. They must be with JS to improve server performance.
