@@ -1,0 +1,57 @@
+﻿body {
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h2 {
+    color: #ff6a00;
+}
+
+h4, h6 {
+    color: #4800ff;
+}
+p {
+    word-break: break-word;
+}
+.index-card {
+    color: #640b68;
+    padding: 3%;
+    border-radius: 5%;
+    background-color: navajowhite;
+}
+
+.index-card:hover {
+    border-radius: 10%;
+    background-color: antiquewhite;
+}
+
+.index-image {
+    text-align: center;
+    color: white;
+    background: rgba(39, 127, 130, 0.74) url("../Content/index.jpg") no-repeat fixed 50% 0px;
+    opacity: 0.9;
+    position: relative;
+}
+.case-details {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 6em;
+}

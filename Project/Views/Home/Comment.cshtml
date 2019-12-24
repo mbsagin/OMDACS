@@ -1,0 +1,34 @@
+﻿@model Project.Models.Comment
+@{
+    ViewBag.Title = "Comment";
+}
+<h2>Help to Patient</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm("Comment", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Enter your comment:", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Comment1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Comment1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index") | 
+    @Html.ActionLink("Return to Cases", "AllCases")
+</div>

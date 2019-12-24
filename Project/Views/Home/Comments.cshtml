@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Comments";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<hr />
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-md-4">
+        <h4>@item.User</h4>
+        <p class="text-justify">
+            @item.Comment1
+        </p>
+        <p>
+            <i>@item.User</i> posted this comment at <i>@item.PostedDate.ToLongDateString()</i>
+        </p>
+        @if (Session["Fullname"].ToString() == item.User)
+        {
+            <a class="btn btn-danger" href="@Url.Action("DeleteComment", "Home", new { id = item.CommentID }, null)" role="button">Delete</a>
+        }
+    </div>
+    }
+</div>
+
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index") | 
+    @Html.ActionLink("Return to Cases", "AllCases")
+</div>

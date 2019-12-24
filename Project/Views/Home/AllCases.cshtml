@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "All Cases";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<hr />
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-md-4 my-2">
+        <h2>@item.Title</h2>
+        <p>
+            <strong>Symptoms Began : </strong>@item.SymptomsBegan.ToLongDateString()
+        </p>
+        <p class="case-details">
+            <strong>Symptoms Details : </strong>@item.SymptomsDetail
+        </p>
+        <p>
+            <i>@item.User</i> updated at <i>@item.PostedDate.ToLongDateString()</i>
+        </p>
+        <a class="btn btn-outline-info" href="@Url.Action("CaseDetails", "Home", new { id = item.CaseID }, null)" role="button">Details</a>
+    </div>
+    }
+</div>
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index")
+</div>
+

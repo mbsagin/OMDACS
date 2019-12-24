@@ -1,0 +1,17 @@
+﻿@model Project.Models.Comment
+@{
+    ViewBag.Title = "DeleteComment";
+}
+<h2>Delete Your Comment</h2>
+<h3>@ViewBag.Message</h3>
+<hr />
+<h4>Are you sure you wish to delete this comment?</h4>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-danger" href="@Url.Action("DeleteFromList2", "Home", new { id = @Model.CommentID }, null)" role="button">Confirm Delete</a>
+    </div>
+</div>
+
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index")
+</div>

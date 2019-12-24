@@ -1,0 +1,18 @@
+﻿@model Project.Models.Case
+@{
+    ViewBag.Title = "DeleteCase";
+}
+<h2>Delete Your Case</h2>
+<h3>@ViewBag.Message</h3>
+<hr />
+<h4>Are you sure you wish to delete this case?</h4>
+<div class="row">
+    <div class="col-md-12">
+        <h2>@Model.Title</h2>
+        <a class="btn btn-danger" href="@Url.Action("DeleteFromList", "Home", new { id = @Model.CaseID }, null)" role="button">Confirm Delete</a>
+    </div>
+</div>
+
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index")
+</div>

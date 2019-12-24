@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "User DashBoard";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<hr />
+@if (Session["Email"] != null)
+{
+<p>
+    Welcome <i>@Session["Fullname"].ToString()</i> !<br />
+</p>
+<div class="my-2">
+    <a class="btn btn-outline-info" href="@Url.Action("MyCases", "Home")" role="button">My Cases</a>
+    <a class="btn btn-outline-danger" href="@Url.Action("LogOut", "Home")" role="button">Log Out</a>
+</div>
+}
+
+<div class="my-4">
+    @Html.ActionLink("Back to Home", "Index")
+</div>
