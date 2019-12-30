@@ -33,9 +33,9 @@
         @Html.LabelFor(model => model.Gender, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.Label("Male")
-            @Html.RadioButtonFor(m => m.Gender, "M")
+            @Html.RadioButtonFor(model => model.Gender, "M")
             @Html.Label("Female")
-            @Html.RadioButtonFor(m => m.Gender, "F")
+            @Html.RadioButtonFor(model => model.Gender, "F")
         </div>
     </div>
 
@@ -44,6 +44,7 @@
         <div class="col-md-10">
             @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+
         </div>
     </div>
 
